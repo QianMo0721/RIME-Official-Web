@@ -23,11 +23,11 @@
                             sizes="(max-width: 768px) 60px, 120px" alt="RIME Logo" class="logo-img">
                         <span class="logo-text">RIME · 雾凇</span>
                     </div>
-                    <div class="mobile-menu-toggle">
+                    <button class="mobile-menu-toggle" type="button" aria-label="切换导航菜单" aria-expanded="false">
                         <span></span>
                         <span></span>
                         <span></span>
-                    </div>
+                    </button>
                     <ul class="nav-menu">
                         <li class="nav-item"><a href="#home" class="nav-link">首页</a></li>
                         <li class="nav-item"><a href="#about" class="nav-link">关于</a></li>
@@ -53,8 +53,8 @@
                         </div>
                         <div class="hero-text">
                             <h1 class="hero-title">RIME · 雾凇</h1>
-                            <p class="hero-subtitle">新星工程 & GTNH 双区服科技服务器，致力于寻找玩法与稳定的最佳平衡。<br>Q群：567367746 |
-                                服务器IP：mc.abreeze.icu 或 gtnh.abreeze.icu</p>
+                            <p class="hero-subtitle">双区服科技服务器，致力于寻找玩法与稳定的最佳平衡。<br>Q群：567367746 |
+                                服务器IP：mc.abreeze.icu</p>
                         </div>
                     </div>
                     <div class="cta-buttons">
@@ -86,11 +86,11 @@
                     <div class="about-text">
                         <p>RIME · 雾凇是一个致力于寻找玩法与稳定的Minecraft服务器，我们提供两个特色区服供玩家选择：</p>
 
-                        <h3>第一区服：新星工程</h3>
-                        <p>体验最新版本的新星工程整合包，涵盖科技、魔法、冒险等多种元素，为玩家提供丰富的游戏内容和挑战。</p>
+                        <h3>第一区服：GregTech Odyssey</h3>
+                        <p>经过极致性能优化的科技导向的格雷整合包，致力于在现代格雷的基础上为玩家提供多样的，有挑战性的体验和游戏中包含复杂又有趣的各种自定义机制机器，以及能够带来巨大产能提升的的功能仓室。</p>
 
-                        <h3>第二区服：GTNH</h3>
-                        <p>专注于GTNH整合包，深度体验工业科技的魅力，挑战复杂的科技树和生产流程。</p>
+                        <h3>第二区服：FTB StoneBlock 4</h3>
+                        <p>StoneBlock 4 是 Minecraft 模组界最具标志性的系列之一的全新篇章，从零重建，旨在为你带来熟悉又热爱的地下生存体验——如今拥有更深层次的成长系统、剧情驱动的游戏玩法，当然还有随机奖励！</p>
 
                         <h3>服务器特色</h3>
                         <ul>
@@ -115,7 +115,7 @@
                 <p class="section-subtitle">探索我们精彩的游戏世界</p>
                 <div class="gallery-grid">
                     <div class="gallery-item">
-                        <img src="rime-web/assets/16_9.png" alt="服务器概览" class="gallery-image" loading="lazy">
+                        <img src="rime-web/assets/ingame_2.png" alt="服务器概览" class="gallery-image" loading="lazy">
                     </div>
                     <div class="gallery-item">
                         <img src="rime-web/assets/ingame3.png" alt="工业建筑" class="gallery-image" loading="lazy">
@@ -167,32 +167,39 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // 移动端菜单切换
+            // 移动端菜单切换（增加可访问性与健壮性）
             const mobileToggle = document.querySelector('.mobile-menu-toggle');
             const navMenu = document.querySelector('.nav-menu');
 
-            if (mobileToggle) {
+            if (mobileToggle && navMenu) {
                 mobileToggle.addEventListener('click', function () {
-                    navMenu.classList.toggle('active');
+                    const isOpen = navMenu.classList.toggle('active');
+                    mobileToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
                 });
 
                 // 点击导航链接后关闭移动端菜单
                 document.querySelectorAll('.nav-link').forEach(link => {
                     link.addEventListener('click', function () {
                         navMenu.classList.remove('active');
+                        mobileToggle.setAttribute('aria-expanded', 'false');
                     });
                 });
             }
 
-            // 导航栏滚动效果
+            // 导航栏滚动效果（增加空节点判断，并在初始渲染时执行一次）
             const navbar = document.querySelector('.navbar');
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > 50) {
-                    navbar.classList.add('scrolled');
-                } else {
-                    navbar.classList.remove('scrolled');
-                }
-            });
+            if (navbar) {
+                const handleScroll = () => {
+                    if (window.scrollY > 50) {
+                        navbar.classList.add('scrolled');
+                    } else {
+                        navbar.classList.remove('scrolled');
+                    }
+                };
+
+                handleScroll();
+                window.addEventListener('scroll', handleScroll);
+            }
 
             // 生成粒子
             const particlesContainer = document.querySelector('.particles-container');
@@ -209,12 +216,14 @@
                 }
             }
 
-            // 滚动
+            // 锚点平滑滚动，避免无效阻止默认行为
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
+                    const href = this.getAttribute('href');
+                    const target = href ? document.querySelector(href) : null;
+
                     if (target) {
+                        e.preventDefault();
                         target.scrollIntoView({
                             behavior: 'smooth',
                             block: 'start'
@@ -223,8 +232,6 @@
                 });
             });
         });
-
-
     </script>
 </body>
 

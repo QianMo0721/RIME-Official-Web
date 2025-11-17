@@ -44,7 +44,7 @@ body {
     background: var(--bg-primary);
     min-height: 100vh;
     overflow-x: hidden;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -207,6 +207,8 @@ body {
     cursor: pointer;
     padding: 0.5rem;
     z-index: 1001;
+    background: transparent;
+    border: none;
 }
 
 .mobile-menu-toggle span {
@@ -230,6 +232,7 @@ body {
     justify-content: center;
     overflow: hidden;
     background: url('../assets/ingame1.png') center/cover no-repeat;
+    scroll-margin-top: 80px;
 }
 
 .particles-container {
@@ -478,6 +481,7 @@ body {
 .section {
     padding: 6rem 0;
     position: relative;
+    scroll-margin-top: 80px;
 }
 
 .section-title {
@@ -808,21 +812,6 @@ footer::before {
 
 
 
-    .server-info {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        min-width: auto;
-        padding: 1rem;
-    }
-
-
-
-    .server-info {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-        padding: 1.5rem;
-    }
-
     .cta-buttons {
         flex-direction: column;
         align-items: center;
@@ -860,10 +849,6 @@ footer::before {
         font-size: 1rem;
     }
 
-    .server-info {
-        padding: 1rem;
-    }
-
     .contact-card {
         padding: 1.5rem;
     }
@@ -894,31 +879,4 @@ footer::before {
 *:focus {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
-}
-
-.loading {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s ease;
-}
-
-.loading.loaded {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.will-change {
-    will-change: transform, opacity;
-}
-
-@media (prefers-color-scheme: dark) {
-    :root {
-        --text-primary: #f9fafb;
-        --text-secondary: #d1d5db;
-        --text-light: #9ca3af;
-        --bg-primary: #1f2937;
-        --bg-secondary: #111827;
-        --bg-tertiary: #0f172a;
-        --border-color: #374151;
-    }
 }
