@@ -1,265 +1,368 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RIME · 雾凇 - Minecraft 服务器</title>
-    <meta name="description" content="RIME · 雾凇 双区服科技服务器，兼顾玩法与稳定的 Minecraft 服务器。">
-    <link rel="icon" href="rime-web/assets/16_16.png" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta
+      name="description"
+      content="RIME · 雾凇 双区服科技服务器，兼顾玩法与稳定的 Minecraft 服务器。"
+    />
+    <link rel="icon" href="rime-web/assets/16_16.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap"
-        rel="stylesheet">
-    <link rel="preload" as="image" href="rime-web/assets/ingame1.png">
-    <link rel="stylesheet" href="rime-web/css/style.css">
-</head>
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600;700&family=Sora:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preload" as="image" href="rime-web/assets/ingame1.png" />
+    <link rel="stylesheet" href="rime-web/css/style.css" />
+  </head>
 
-<body>
+  <body>
     <div class="grain-layer" aria-hidden="true"></div>
     <header class="site-header" id="top">
-        <div class="container nav-bar">
-            <a href="#home" class="brand" aria-label="返回首页">
-                <img src="rime-web/assets/c_1_1_60.png" alt="RIME 标志" class="brand-mark">
-                <div class="brand-copy">
-                    <span class="brand-title">RIME · 雾凇</span>
-                    <span class="brand-subtitle">Minecraft 科技服务器</span>
-                </div>
-            </a>
-            <div class="nav-wrapper" data-nav data-open="false">
-                <nav class="nav-links">
-                    <a href="#home">首页</a>
-                    <a href="#about">关于</a>
-                    <a href="#gallery">画廊</a>
-                    <a href="#contact">联系</a>
-                    <a href="https://docs.abreeze.icu/getting-started" target="_blank" rel="noreferrer noopener">文档</a>
-                </nav>
-                <div class="nav-cta">
-                    <a class="btn primary"
-                        href="https://qm.qq.com/cgi-bin/qm/qr?k=1fve-ysV21jBeToeVDqbttofDRMeThsB&jump_from=webapi&authKey=pf7BK2S5loqNnhfWSOyzcSiFrpOkWej1Fvp4f1ZEYHukWYhSJ4J0gxJeGiejHpbe"
-                        target="_blank" rel="noreferrer noopener">立即加入</a>
-                    <button class="btn ghost theme-toggle" type="button" aria-label="切换主题"
-                        data-theme-toggle>
-                        <span class="icon-sun" aria-hidden="true"></span>
-                        <span class="icon-moon" aria-hidden="true"></span>
-                    </button>
-                </div>
-            </div>
-            <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav"
-                data-nav-toggle>
-                <span></span>
-                <span></span>
-                <span></span>
+      <div class="container nav-bar">
+        <a href="#home" class="brand" aria-label="返回首页">
+          <img
+            src="rime-web/assets/c_1_1_60.png"
+            alt="RIME 标志"
+            class="brand-mark"
+          />
+          <div class="brand-copy">
+            <span class="brand-title">RIME · 雾凇</span>
+            <span class="brand-subtitle">Minecraft 科技服务器</span>
+          </div>
+        </a>
+        <div class="nav-wrapper" data-nav data-open="false">
+          <nav class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#about">关于</a>
+            <a href="#gallery">画廊</a>
+            <a href="#contact">联系</a>
+            <a
+              href="https://docs.abreeze.icu/getting-started"
+              target="_blank"
+              rel="noreferrer noopener"
+              >文档</a
+            >
+          </nav>
+          <div class="nav-cta">
+            <a
+              class="btn primary"
+              href="https://qm.qq.com/cgi-bin/qm/qr?k=1fve-ysV21jBeToeVDqbttofDRMeThsB&jump_from=webapi&authKey=pf7BK2S5loqNnhfWSOyzcSiFrpOkWej1Fvp4f1ZEYHukWYhSJ4J0gxJeGiejHpbe"
+              target="_blank"
+              rel="noreferrer noopener"
+              >立即加入</a
+            >
+            <button
+              class="btn ghost theme-toggle"
+              type="button"
+              aria-label="切换主题"
+              data-theme-toggle
+            >
+              <span class="icon-sun" aria-hidden="true"></span>
+              <span class="icon-moon" aria-hidden="true"></span>
             </button>
+          </div>
         </div>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+          data-nav-toggle
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
     </header>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-backdrop" aria-hidden="true">
-                <div class="orb orb-one"></div>
-                <div class="orb orb-two"></div>
-                <div class="orb orb-three"></div>
+      <section id="home" class="hero">
+        <div class="hero-backdrop" aria-hidden="true">
+          <div class="orb orb-one"></div>
+          <div class="orb orb-two"></div>
+          <div class="orb orb-three"></div>
+        </div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">双区服 · 高稳定 · 进阶科技体验</p>
+            <h1>一个专注于玩法和稳定的 Minecraft 服务器</h1>
+            <p class="hero-lede">
+              RIME ·
+              雾凇是一个我的世界服务器，以极致的性能优化与审慎的运营节奏维系两个科技区服。
+              这里既是挑战者的工坊，也是玩家彼此信赖的社群。访问
+              <a
+                href="https://docs.abreeze.icu/getting-started"
+                target="_blank"
+                rel="noreferrer noopener"
+                >docs.abreeze.icu/getting-started</a
+              >
+              获取完整的入服指引。
+            </p>
+            <div class="hero-actions">
+              <a
+                class="btn primary"
+                href="https://qm.qq.com/cgi-bin/qm/qr?k=1fve-ysV21jBeToeVDqbttofDRMeThsB&jump_from=webapi&authKey=pf7BK2S5loqNnhfWSOyzcSiFrpOkWej1Fvp4f1ZEYHukWYhSJ4J0gxJeGiejHpbe"
+                target="_blank"
+                rel="noreferrer noopener"
+                >进入 QQ 群</a
+              >
+              <a
+                class="btn secondary"
+                href="https://docs.abreeze.icu/getting-started"
+                target="_blank"
+                rel="noreferrer noopener"
+                >阅读文档</a
+              >
             </div>
-            <div class="container hero-grid">
-                <div class="hero-copy reveal">
-                    <p class="eyebrow">双区服 · 高稳定 · 进阶科技体验</p>
-                    <h1>一个专注于玩法和稳定的 Minecraft 服务器</h1>
-                    <p class="hero-lede">RIME · 雾凇是一个我的世界服务器，以极致的性能优化与审慎的运营节奏维系两个科技区服。
-                        这里既是挑战者的工坊，也是玩家彼此信赖的社群。访问
-                        <a href="https://docs.abreeze.icu/getting-started" target="_blank" rel="noreferrer noopener">docs.abreeze.icu/getting-started</a>
-                        获取完整的入服指引。</p>
-                    <div class="hero-actions">
-                        <a class="btn primary"
-                            href="https://qm.qq.com/cgi-bin/qm/qr?k=1fve-ysV21jBeToeVDqbttofDRMeThsB&jump_from=webapi&authKey=pf7BK2S5loqNnhfWSOyzcSiFrpOkWej1Fvp4f1ZEYHukWYhSJ4J0gxJeGiejHpbe"
-                            target="_blank" rel="noreferrer noopener">进入 QQ 群</a>
-                        <a class="btn secondary" href="https://docs.abreeze.icu/getting-started" target="_blank"
-                            rel="noreferrer noopener">阅读文档</a>
-                    </div>
-                    <div class="hero-stats">
-                        <div class="hero-stat-card">
-                            <span class="label">在线时长</span>
-                            <strong>70% 以上</strong>
-                            <span class="note">全年可用性</span>
-                        </div>
-                        <div class="hero-stat-card">
-                            <span class="label">玩家活跃</span>
-                            <strong>5+</strong>
-                            <span class="note">核心成员</span>
-                        </div>
-                        <div class="hero-stat-card">
-                            <span class="label">平均延迟</span>
-                            <strong>&lt; 60ms</strong>
-                            <span class="note">国内节点</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="hero-visual reveal">
-                    <div class="server-card">
-                        <div class="server-card__header">
-                            <p class="eyebrow">第一区服</p>
-                            <h3>GregTech Odyssey</h3>
-                        </div>
-                        <p>以 GregTech 为核心的魔改科技整合包，辅以魔法与冒险内容。</p>
-                        <ul>
-                            <li>TPS 锁定 20，极致性能优化</li>
-                            <li>从 LV 一路推进到 MAX，完整体验 GT 机器与多方块流程</li>
-                            <li>提供多种样板总成、大型多方块机器与自动化方案，方便玩家搭建大规模工厂</li>
-                        </ul>
-                    </div>
-                    <div class="server-card accent">
-                        <div class="server-card__header">
-                            <p class="eyebrow">第二区服</p>
-                            <h3>ATM10 · To The Sky</h3>
-                        </div>
-                        <p>将空岛挑战与 ATM10 终极整合融合，轻量指引搭配深度模组，适合探索者与创造家。</p>
-                        <ul>
-                            <li>从小处着手，利用现代自动化、魔法、科技和探索在天空中建立你的帝国，同时在虚空的边缘生存。</li>
-                            <li>将高自由度的 ATM10 世界转化为渐进式的空岛挑战，需要你巧妙构思、高效自动化才能到达终章。</li>
-                            <li>跟随任务的指引，或者开始一场自己的冒险，自由探索。</li>
-                        </ul>
-                    </div>
-                </div>
+            <div class="hero-stats">
+              <div class="hero-stat-card">
+                <span class="label">在线时长</span>
+                <strong>70% 以上</strong>
+                <span class="note">全年可用性</span>
+              </div>
+              <div class="hero-stat-card">
+                <span class="label">玩家活跃</span>
+                <strong>5+</strong>
+                <span class="note">核心成员</span>
+              </div>
+              <div class="hero-stat-card">
+                <span class="label">平均延迟</span>
+                <strong>&lt; 60ms</strong>
+                <span class="note">国内节点</span>
+              </div>
             </div>
-            <div class="floating-pill" aria-hidden="true">mc.abreeze.icu</div>
-        </section>
+          </div>
+          <div class="hero-visual reveal">
+            <div class="server-card">
+              <div class="server-card__header">
+                <p class="eyebrow">第一区服</p>
+                <h3>GregTech Odyssey</h3>
+              </div>
+              <p>以 GregTech 为核心的魔改科技整合包，辅以魔法与冒险内容。</p>
+              <ul>
+                <li>TPS 锁定 20，极致性能优化</li>
+                <li>从 LV 一路推进到 MAX，完整体验 GT 机器与多方块流程</li>
+                <li>
+                  提供多种样板总成、大型多方块机器与自动化方案，方便玩家搭建大规模工厂
+                </li>
+              </ul>
+            </div>
+            <div class="server-card accent">
+              <div class="server-card__header">
+                <p class="eyebrow">第二区服</p>
+                <h3>ATM10 · To The Sky</h3>
+              </div>
+              <p>
+                将空岛挑战与 ATM10
+                终极整合融合，轻量指引搭配深度模组，适合探索者与创造家。
+              </p>
+              <ul>
+                <li>
+                  从小处着手，利用现代自动化、魔法、科技和探索在天空中建立你的帝国，同时在虚空的边缘生存。
+                </li>
+                <li>
+                  将高自由度的 ATM10
+                  世界转化为渐进式的空岛挑战，需要你巧妙构思、高效自动化才能到达终章。
+                </li>
+                <li>跟随任务的指引，或者开始一场自己的冒险，自由探索。</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="floating-pill" aria-hidden="true">mc.abreeze.icu</div>
+      </section>
 
-        <section id="about" class="section about">
-            <div class="container">
-                <div class="section-header reveal">
-                    <p class="eyebrow">关于 RIME</p>
-                    <h2>稳定、故事、玩法的交汇</h2>
-                    <p class="section-lede">保持高度稳定和极致性能，需要了解白名单、版本节奏与规范，请先访问
-                        <a href="https://docs.abreeze.icu/getting-started" target="_blank" rel="noreferrer noopener">Getting Started</a>。</p>
+      <section id="about" class="section about">
+        <div class="container">
+          <div class="section-header reveal">
+            <p class="eyebrow">关于 RIME</p>
+            <h2>稳定、故事、玩法的交汇</h2>
+            <p class="section-lede">
+              保持高度稳定和极致性能，需要了解白名单、版本节奏与规范，请先访问
+              <a
+                href="https://docs.abreeze.icu/getting-started"
+                target="_blank"
+                rel="noreferrer noopener"
+                >Getting Started</a
+              >。
+            </p>
+          </div>
+          <div class="about-grid">
+            <article class="about-panel about-panel--spec reveal">
+              <div class="panel-header">
+                <h3>运行栈</h3>
+                <p>物理独立服务器，让区服保持稳定 TPS。</p>
+              </div>
+              <div class="spec-grid">
+                <div>
+                  <span class="label">操作系统</span>
+                  <strong>Debian 13</strong>
                 </div>
-                <div class="about-grid">
-                    <article class="about-panel about-panel--spec reveal">
-                        <div class="panel-header">
-                            <h3>运行栈</h3>
-                            <p>物理独立服务器，让区服保持稳定 TPS。</p>
-                        </div>
-                        <div class="spec-grid">
-                            <div>
-                                <span class="label">操作系统</span>
-                                <strong>Debian 13</strong>
-                            </div>
-                            <div>
-                                <span class="label">处理器</span>
-                                <strong>AMD Ryzen 9 9950X</strong>
-                            </div>
-                            <div>
-                                <span class="label">内存</span>
-                                <strong>500G NVMe · 64G DDR4</strong>
-                            </div>
-                            <div>
-                                <span class="label">编排</span>
-                                <strong>MCSM + MCDR</strong>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="about-panel reveal">
-                        <h3>玩家故事</h3>
-                        <p>我们在文档与视频中记录玩家的空岛起点、机械工程和社群实验，并筹备人物志让更多声音被听见。</p>
-                        <ul class="about-list">
-                            <li>赛博人物志（？</li>
-                            <li>更多内容筹备中</li>
-                        </ul>
-                    </article>
+                <div>
+                  <span class="label">处理器</span>
+                  <strong>AMD Ryzen 9 9950X</strong>
                 </div>
-                <article class="about-panel about-panel--services reveal">
-                    <h3>我们提供</h3>
-                    <div class="feature-grid">
-                        <div>
-                            <span>群服互通机器人</span>
-                            <p>入服、离服、TPS、日志实时同步，群内即可执行常用指令。</p>
-                        </div>
-                        <div>
-                            <span>网页服务</span>
-                            <p>远程 AE2 下单、玩家活跃数据仪表盘、加速引导的 Getting Started。</p>
-                        </div>
-                        <div>
-                            <span>尊重创造</span>
-                            <p>每20分钟备份一次，严格制度保证服务器秩序。</p>
-                        </div>
-                        <div>
-                            <span>快速响应</span>
-                            <p>管理层常驻值守，解决玩家困难。</p>
-                        </div>
-                    </div>
-                </article>
+                <div>
+                  <span class="label">内存</span>
+                  <strong>500G NVMe · 64G DDR4</strong>
+                </div>
+                <div>
+                  <span class="label">编排</span>
+                  <strong>MCSM + MCDR</strong>
+                </div>
+              </div>
+            </article>
+            <article class="about-panel reveal">
+              <h3>玩家故事</h3>
+              <p>
+                我们在文档与视频中记录玩家的空岛起点、机械工程和社群实验，并筹备人物志让更多声音被听见。
+              </p>
+              <ul class="about-list">
+                <li>赛博人物志（？</li>
+                <li>更多内容筹备中</li>
+              </ul>
+            </article>
+          </div>
+          <article class="about-panel about-panel--services reveal">
+            <h3>我们提供</h3>
+            <div class="feature-grid">
+              <div>
+                <span>群服互通机器人</span>
+                <p>入服、离服、TPS、日志实时同步，群内即可执行常用指令。</p>
+              </div>
+              <div>
+                <span>网页服务</span>
+                <p>
+                  远程 AE2 下单、玩家活跃数据仪表盘、加速引导的 Getting
+                  Started。
+                </p>
+              </div>
+              <div>
+                <span>尊重创造</span>
+                <p>每20分钟备份一次，严格制度保证服务器秩序。</p>
+              </div>
+              <div>
+                <span>快速响应</span>
+                <p>管理层常驻值守，解决玩家困难。</p>
+              </div>
             </div>
-        </section>
+          </article>
+        </div>
+      </section>
 
-        <section id="gallery" class="section gallery">
-            <div class="container">
-                <div class="section-header align-center reveal">
-                    <p class="eyebrow">游戏瞬间</p>
-                    <h2>来自雾凇的光影记录</h2>
-                    <p class="section-lede">曲面电路、天空农场、协同工厂…… 每幅图像都承载一次创意实验。</p>
-                </div>
-                <div class="gallery-grid">
-                    <div class="gallery-card reveal">
-                        <img src="rime-web/assets/ingame_2.png" alt="服务器概览" loading="lazy">
-                    </div>
-                    <div class="gallery-card reveal">
-                        <img src="rime-web/assets/ingame3.png" alt="工业建筑" loading="lazy">
-                    </div>
-                    <div class="gallery-card reveal">
-                        <img src="rime-web/assets/ingame4.png" alt="科技装置" loading="lazy">
-                    </div>
-                    <div class="gallery-card reveal">
-                        <img src="rime-web/assets/ingame5.png" alt="建筑群落" loading="lazy">
-                    </div>
-                    <div class="gallery-card reveal">
-                        <img src="rime-web/assets/ingame7.png" alt="自动化工厂" loading="lazy">
-                    </div>
-                    <div class="gallery-card reveal">
-                        <img src="rime-web/assets/image6.png" alt="玩家基地" loading="lazy">
-                    </div>
-                </div>
+      <section id="gallery" class="section gallery">
+        <div class="container">
+          <div class="section-header align-center reveal">
+            <p class="eyebrow">游戏瞬间</p>
+            <h2>来自雾凇的光影记录</h2>
+            <p class="section-lede">
+              曲面电路、天空农场、协同工厂…… 每幅图像都承载一次创意实验。
+            </p>
+          </div>
+          <div class="gallery-grid">
+            <div class="gallery-card reveal">
+              <img
+                src="rime-web/assets/ingame_2.png"
+                alt="服务器概览"
+                loading="lazy"
+              />
             </div>
-        </section>
+            <div class="gallery-card reveal">
+              <img
+                src="rime-web/assets/ingame3.png"
+                alt="工业建筑"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-card reveal">
+              <img
+                src="rime-web/assets/ingame4.png"
+                alt="科技装置"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-card reveal">
+              <img
+                src="rime-web/assets/ingame5.png"
+                alt="建筑群落"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-card reveal">
+              <img
+                src="rime-web/assets/ingame7.png"
+                alt="自动化工厂"
+                loading="lazy"
+              />
+            </div>
+            <div class="gallery-card reveal">
+              <img
+                src="rime-web/assets/image6.png"
+                alt="玩家基地"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="contact" class="section contact">
-            <div class="container">
-                <div class="section-header align-center reveal">
-                    <p class="eyebrow">联系</p>
-                    <h2>准备加入雾凇了吗？</h2>
-                    <p class="section-lede">加入 QQ 群获取白名单、查看开服计划，或直接访问文档，逐句阅读我们为你准备的攻略。</p>
-                </div>
-                <div class="contact-grid">
-                    <article class="contact-card reveal">
-                        <h3>服务器地址</h3>
-                        <p class="contact-value">mc.abreeze.icu</p>
-                        <p>全天候负载均衡，智能路由确保稳定延迟。</p>
-                    </article>
-                    <article class="contact-card reveal">
-                        <h3>QQ群聊</h3>
-                        <p class="contact-value">567367746</p>
-                        <a class="btn text"
-                            href="https://qm.qq.com/cgi-bin/qm/qr?k=1fve-ysV21jBeToeVDqbttofDRMeThsB&jump_from=webapi&authKey=pf7BK2S5loqNnhfWSOyzcSiFrpOkWej1Fvp4f1ZEYHukWYhSJ4J0gxJeGiejHpbe"
-                            target="_blank" rel="noreferrer noopener">申请入群</a>
-                    </article>
-                    <article class="contact-card reveal">
-                        <h3>帮助文档</h3>
-                        <p class="contact-value">docs.abreeze.icu/getting-started</p>
-                        <a class="btn text" href="https://docs.abreeze.icu/getting-started" target="_blank"
-                            rel="noreferrer noopener">立即打开</a>
-                    </article>
-                </div>
-            </div>
-        </section>
+      <section id="contact" class="section contact">
+        <div class="container">
+          <div class="section-header align-center reveal">
+            <p class="eyebrow">联系</p>
+            <h2>准备加入雾凇了吗？</h2>
+            <p class="section-lede">
+              加入 QQ
+              群获取白名单、查看开服计划，或直接访问文档，逐句阅读我们为你准备的攻略。
+            </p>
+          </div>
+          <div class="contact-grid">
+            <article class="contact-card reveal">
+              <h3>服务器地址</h3>
+              <p class="contact-value">mc.abreeze.icu</p>
+              <p>全天候负载均衡，智能路由确保稳定延迟。</p>
+            </article>
+            <article class="contact-card reveal">
+              <h3>QQ群聊</h3>
+              <p class="contact-value">567367746</p>
+              <a
+                class="btn text"
+                href="https://qm.qq.com/cgi-bin/qm/qr?k=1fve-ysV21jBeToeVDqbttofDRMeThsB&jump_from=webapi&authKey=pf7BK2S5loqNnhfWSOyzcSiFrpOkWej1Fvp4f1ZEYHukWYhSJ4J0gxJeGiejHpbe"
+                target="_blank"
+                rel="noreferrer noopener"
+                >申请入群</a
+              >
+            </article>
+            <article class="contact-card reveal">
+              <h3>帮助文档</h3>
+              <p class="contact-value">docs.abreeze.icu/getting-started</p>
+              <a
+                class="btn text"
+                href="https://docs.abreeze.icu/getting-started"
+                target="_blank"
+                rel="noreferrer noopener"
+                >立即打开</a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container">
-            <p>&copy; 2025 RIME · 雾凇. Crafted with dedication by the RIME 团队。</p>
-            <a href="#home" class="btn ghost">回到顶部</a>
-        </div>
+      <div class="container">
+        <p>
+          &copy; 2025 RIME · 雾凇. Crafted with dedication by the RIME 团队。
+        </p>
+        <a href="#home" class="btn ghost">回到顶部</a>
+      </div>
     </footer>
 
     <script src="rime-web/js/script.js" defer></script>
-</body>
-
+  </body>
 </html>
