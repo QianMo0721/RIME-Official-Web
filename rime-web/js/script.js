@@ -91,7 +91,7 @@ const updateHeaderState = () => {
 window.addEventListener("scroll", updateHeaderState);
 updateHeaderState();
 
-const navLinks = document.querySelectorAll("a[href^=#]");
+const navLinks = document.querySelectorAll("a[href^='#']");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
     navWrapper?.setAttribute("data-open", "false");
